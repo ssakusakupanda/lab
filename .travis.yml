@@ -4,16 +4,21 @@ os: osx
 
 language: c++
 
+osx_image: xcode9.3
+
+jdk:
+  - oraclejdk8
+
 addons:
   homebrew:
     taps:
       - bazelbuild/tap
-      - homebrew/cask-versions
-    casks:
-      - java8
 
 before_install:
-  - brew install bazel glib sdl2
+  - brew install bazel glib sdl2 python python@2
 
 script:
+  - find -L /usr/local/Cellar -type f -name Python.h -o -name arrayobject.h
+  - find -L /usr/local/Cellar -type f -iname "*sdl2*"
+  - bazel --version
   - bazel build -c opt --copt=-Wno-sign-compare --show_progress_rate_limit=10 //:game

@@ -98,7 +98,7 @@ new_local_repository(
 new_local_repository(
     name = "sdl_system",
     build_file = "sdl.BUILD",
-    path = "/usr/local/Cellar/sdl2/2.0.9",
+    path = "/usr/local/Cellar/sdl2/2.0.9_1",
 )
 
 new_local_repository(
