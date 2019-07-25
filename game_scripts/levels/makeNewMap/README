@@ -23,7 +23,7 @@ These programs are simple process for making new simple maze.
       sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromText 
       sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromText --length=10000 --width=640 --height=480
 
- @maze_read_fromFactory [ Mostly sample programs ]
+ @maze_read_fromFactory [ I understood how to use ]
    # Factory: like class, factory has method of surport for creating maze.
    1. Rewrite code <require Factory> 
    2. Rewrite mapName and episodeLengthSeconds
@@ -31,7 +31,7 @@ These programs are simple process for making new simple maze.
       sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromFactory 
       sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromFactory --length=10000 --width=640 --height=480
 
- @maze_random_maker.lua [ Mostly sample programs ]
+ @maze_random_maker.lua [ I understood how to use ]
    1. Execution program :  
       sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_random_maker
       sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/maze_random_maker --length=10000 --width=640 --height=480
