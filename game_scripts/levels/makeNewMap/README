@@ -1,0 +1,30 @@
+
+First step, main topic is make maze.
+These programs are simple process for making new maze.
+
+ [ mainFlow ]
+   1. Make or Road maze
+   2. Set Object
+   3. Execution program
+   4. Operate an agent Or Run a random agent
+
+#programs
+
+ @simple_maze.lua
+   1. Write maze in program. (entity = < map >)
+   2. Execution program :
+      sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/simlpe_maze 
+
+ @maze_maker_fromText
+   1. Prepare the text of maze in 'maps' derectory.
+   2. Rewrite input file in program. (f = < map's file path >)
+   3. Execution program : 
+      sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromText 
+
+ @maze_read_fromFactory
+   # Factory: like class, factory has method of surport for creating maze.
+   1. Rewrite code <require Factory> 
+   2. Rewrite mapName and episodeLengthSeconds
+   3. Execution program :  
+      sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromFactory 
+
