@@ -1,37 +1,38 @@
 
-First step, main topic is make maze.
-These programs are simple process for making new simple maze.
+First step, main topic is to make a maze.
+These programs are for making a new simple maze.
 
  [ mainFlow ]
-   1. Make or Road maze
-   2. Set Object
-   3. Execution program
-   4. Operate an agent Or Run a random agent
+   1. Make or load a maze
+   2. Set objects
+   3. Execute a program
+   4. Control an agent or run a random agent
 
 #programs
 
  @simple_maze.lua
-   1. Write maze in program. (entity = < map >)
-   2. Execution program :
+   1. Rewrite maze inside the program. (entity = < map >)
+   2. Execute the program :
       sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/simlpe_maze 
       sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/simple_maze --length=10000 --width=640 --height=480
 
- @maze_maker_fromText
-   1. Prepare the text of maze in 'maps' derectory.
-   2. Rewrite input file in program. (f = < map's file path >)
-   3. Execution program : 
-      sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromText 
-      sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromText --length=10000 --width=640 --height=480
+ @maze_maker_fromTxtFile
+   1. Prepare the txt file of a maze in 'maps' derectory.
+   2. Rewrite path inside the program. (f = < map's txt file path >)
+   3. Execute the program : 
+      sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromTxtFile 
+      sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromTxtFile --length=10000 --width=640 --height=480
 
- @maze_read_fromFactory [ I understood how to use ]
+ @maze_read_fromFactory [ Mostly borrowed from the sample ]
    # Factory: like class, factory has method of surport for creating maze.
-   1. Rewrite code <require Factory> 
-   2. Rewrite mapName and episodeLengthSeconds
-   3. Execution program :  
+   1. Rewrite <require Factory> line
+   2. Set mapName and episodeLengthSeconds
+   3. Execute the program :  
       sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromFactory 
       sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/maze_read_fromFactory --length=10000 --width=640 --height=480
 
- @maze_random_maker.lua [ I understood how to use ]
-   1. Execution program :  
+ @maze_random_maker.lua [ Mostly borrowed from the sample ]
+   1. Execute the program :  
       sudo bazel run game: --define graphics=sdl -- --level_script=makeNewMap/maze_random_maker
       sudo bazel run python_random_agent: --define graphics=sdl -- --level_script=makeNewMap/maze_random_maker --length=10000 --width=640 --height=480
+
